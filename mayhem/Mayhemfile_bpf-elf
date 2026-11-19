@@ -1,0 +1,9 @@
+project: savantenvs/dpdk
+target: bpf-elf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bpf-elf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bpf_elf
+    libfuzzer: true
+    timeout: 5

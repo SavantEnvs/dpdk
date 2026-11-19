@@ -1,0 +1,9 @@
+project: savantenvs/dpdk
+target: cfgfile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cfgfile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cfgfile
+    libfuzzer: true
+    timeout: 5

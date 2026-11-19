@@ -1,0 +1,9 @@
+project: savantenvs/dpdk
+target: bpf-cbpf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bpf-cbpf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bpf_cbpf
+    libfuzzer: true
+    timeout: 5

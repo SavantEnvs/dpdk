@@ -1,0 +1,9 @@
+project: savantenvs/dpdk
+target: ipsec-inb
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ipsec-inb/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ipsec_inb
+    libfuzzer: true
+    timeout: 5

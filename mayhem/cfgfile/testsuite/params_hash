@@ -1,0 +1,6 @@
+#[sec]
+key = v # c
+#comment
+[two]
+a=1
+b=

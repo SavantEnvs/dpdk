@@ -1,0 +1,9 @@
+project: savantenvs/dpdk
+target: net-ptype
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/net-ptype/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_net_ptype
+    libfuzzer: true
+    timeout: 5

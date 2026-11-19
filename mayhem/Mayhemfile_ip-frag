@@ -1,0 +1,9 @@
+project: savantenvs/dpdk
+target: ip-frag
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ip-frag/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ip_frag
+    libfuzzer: true
+    timeout: 5

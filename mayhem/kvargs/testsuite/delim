@@ -1,0 +1,1 @@
+iface=eth0:queues=4:list=[1,2]
